@@ -46,12 +46,6 @@ namespace IsometricPlayground
 
         private void ReadMoveInput(Vector2 input)
         {
-            if (input is { x: >= 1, y: >= 1 })
-            {
-                input.x = 0.7f;
-                input.y = 0.7f;
-            }
-            
             _moveInput = new Vector3(input.x, 0, input.y);
         }
         
@@ -59,20 +53,6 @@ namespace IsometricPlayground
         {
             _currentSpeed = isPressed ? sprintSpeed : walkSpeed;
         }
-        
-        // private void ReadInput()
-        // {
-        //     _moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        //
-        //     if (Input.GetButton("Sprint"))
-        //     {
-        //         _currentSpeed = sprintSpeed;
-        //     }
-        //     else if (Input.GetButtonUp("Sprint"))
-        //     {
-        //         _currentSpeed = walkSpeed;
-        //     }
-        // }
 
         private void Look()
         {
